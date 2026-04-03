@@ -32,350 +32,270 @@
 
 <body>
 
-    <nav>
-        <div class="bg-white p-4 position-fixed w-full top-0 left-0 shadow-md z-10">
-            <div class="container mx-auto flex items-center justify-between ">
-
-                <div class=" flex items-center justify-center space-x-6">
-                    <a href="#" class="text-brand-purple text-3xl font-extrabold">My Website</a>
-                    <span
-                        class="rounded-full bg-brand-light w-auto h-5 text-center p-3 flex justify-center items-center  text-gray-800 font-weight-thin">Shrouk
-                        ahmed</span>
-                </div>
-                <ul class="flex space-x-4  sm:hidden lg:flex md:flex">
-                    <li><a href="#" class="text-black hover:text-gray-500">Home</a></li>
-                    <li><a href="#" class="text-black hover:text-gray-500">About</a></li>
-                    <li><a href="#" class="text-black hover:text-gray-500">Services</a></li>
-                    <li><a href="#" class="text-black hover:text-gray-500">Contact</a></li>
-                    <li><a href="#" class="text-black hover:text-gray-500">Contact</a></li>
-                </ul>
-
-                <button
-                    class="bg-brand-purple hover:shadow-lg text-white font-bold py-2 px-4 rounded transition duration-300">
+    
+    <!-- NAV -->
+    <nav class="bg-white fixed w-full top-0 left-0 shadow-md z-10">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+ 
+            <div class="flex items-center space-x-3">
+                <a href="#" class="text-brand-purple text-2xl font-extrabold">My Website</a>
+                <span class="rounded-full bg-brand-light px-3 py-1 text-sm text-gray-800 hidden sm:inline-flex">Shrouk Ahmed</span>
+            </div>
+ 
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-black hover:text-gray-500">Home</a></li>
+                <li><a href="#" class="text-black hover:text-gray-500">About</a></li>
+                <li><a href="#" class="text-black hover:text-gray-500">Services</a></li>
+                <li><a href="#" class="text-black hover:text-gray-500">Contact</a></li>
+            </ul>
+ 
+            <div class="flex items-center gap-3">
+                <button class="bg-brand-purple hover:shadow-lg text-white font-bold py-2 px-4 rounded transition duration-300 text-sm">
                     Get Started
+                </button>
+                <!-- Hamburger -->
+                <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-1" onclick="toggleMenu()">
+                    <span class="block w-6 h-0.5 bg-gray-800 transition-all"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800 transition-all"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800 transition-all"></span>
                 </button>
             </div>
         </div>
-    </nav>
-    <!-- /////////////////////////////////////// -->
-    <main
-        class=" bg-brand-light  min-h-screen w-full flex flex-col justify-center items-center gap-10 px-5 md:flex-row">
-        <!-- content -->
-
-        <div class="md:w-1/2">
-            <h1 class="font-extrabold text-5xl text-brand-purple mb-6 leading-snug w-[600px]">We Create Digital Success
-                for Your Brand</h1>
-            <p class="mb-6 text-xl text-gray-600 max-w-fit leading-relaxed">Lorem ipsum dolor sit amet,a veritatis
-                doloremque totam saepe ab iusto oviden mollitia,
-                consequuntur reiciendis labore ullam nobis!</p>
-            <div class="flex gap-4 items-center mb-10 ">
-                <p class="text-lg"><i class="fa-solid fa-circle-check fa-lg" style="color: rgb(50, 167, 46);"></i>
-                    Professional Team
-                </p>
-                <p class="text-lg"><i class="fa-solid fa-circle-check fa-lg" style="color: rgb(50, 167, 46);"></i> 10+
-                    Years Experience
-                </p>
-                <p class="text-lg"><i class="fa-solid fa-circle-check fa-lg" style="color: rgb(50, 167, 46);"></i> +500
-                    Clients</p>
-            </div>
-            <button
-                class=" mr-10 bg-brand-purple hover:shadow-lg text-white text-lg font-bold py-4 px-8 rounded transition duration-300">
-                Start your journey Now
-            </button>
-            <button
-                class="  bg-white hover:shadow-lg text-brand-purple font-bold  text-lg  py-4 px-8 rounded transition duration-300 border border-gray-600 hover:border-brand-purple">
-                <i class="fa-solid fa-circle-play" style="color: rgb(58, 59, 58);"></i> Watch the video
-            </button>
+ 
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4">
+            <ul class="flex flex-col space-y-3 pt-3">
+                <li><a href="#" class="text-black hover:text-brand-purple block">Home</a></li>
+                <li><a href="#" class="text-black hover:text-brand-purple block">About</a></li>
+                <li><a href="#" class="text-black hover:text-brand-purple block">Services</a></li>
+                <li><a href="#" class="text-black hover:text-brand-purple block">Contact</a></li>
+            </ul>
         </div>
-        <!-- image  -->
-
-        <div class="">
-            <img src="photo_2023-12-06_02-34-31.jpg" alt="" class="rounded w-[335px] h-[335px] object-cover ">
+    </nav>
+ 
+    <!-- HERO -->
+    <main class="bg-brand-light min-h-screen w-full flex flex-col justify-center items-center gap-10 px-5 pt-24 pb-10 md:flex-row md:pt-0">
+        <div class="md:w-1/2 text-center md:text-left">
+            <h1 class="font-extrabold text-4xl md:text-5xl text-brand-purple mb-6 leading-snug max-w-full">
+                We Create Digital Success for Your Brand
+            </h1>
+            <p class="mb-6 text-lg md:text-xl text-gray-600 leading-relaxed">
+                Lorem ipsum dolor sit amet, a veritatis doloremque totam saepe ab iusto oviden mollitia,
+                consequuntur reiciendis labore ullam nobis!
+            </p>
+            <div class="flex flex-wrap gap-3 justify-center md:justify-start items-center mb-8">
+                <p class="text-base"><i class="fa-solid fa-circle-check fa-lg" style="color: rgb(50, 167, 46);"></i> Professional Team</p>
+                <p class="text-base"><i class="fa-solid fa-circle-check fa-lg" style="color: rgb(50, 167, 46);"></i> 10+ Years Experience</p>
+                <p class="text-base"><i class="fa-solid fa-circle-check fa-lg" style="color: rgb(50, 167, 46);"></i> +500 Clients</p>
+            </div>
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <button class="bg-brand-purple hover:shadow-lg text-white text-base font-bold py-3 px-6 rounded transition duration-300">
+                    Start your journey Now
+                </button>
+                <button class="bg-white hover:shadow-lg text-brand-purple font-bold text-base py-3 px-6 rounded transition duration-300 border border-gray-400 hover:border-brand-purple">
+                    <i class="fa-solid fa-circle-play mr-1" style="color: rgb(58, 59, 58);"></i> Watch the video
+                </button>
+            </div>
+        </div>
+ 
+        <div class="flex justify-center">
+            <img src="photo_2023-12-06_02-34-31.jpg" alt="" class="rounded w-[280px] h-[280px] md:w-[335px] md:h-[335px] object-cover">
         </div>
     </main>
-    <!-- ////////////////////////////////////////////////////////// -->
-    <section class=" flex flex-col justify-center items-center gap-10 px-5 ">
-        <div class="container-fluid mt-[100px]">
-            <div class="text-center ">
-                <h1 class="text-4xl text-brand-purple mb-6">Our Integrated Services</h1>
-                <p class="text-lg text-gray-600 mb-4">we offer a comprehensive range of digital solutions to grow your
-                    business.</p>
-                <div class=" m-auto w-[100px] h-[5px] bg-brand-purple mb-[60px]">
-                </div>
+ 
+    <!-- SERVICES -->
+    <section class="flex flex-col justify-center items-center gap-10 px-5">
+        <div class="w-full mt-16 md:mt-[100px]">
+            <div class="text-center">
+                <h1 class="text-3xl md:text-4xl text-brand-purple mb-4">Our Integrated Services</h1>
+                <p class="text-base md:text-lg text-gray-600 mb-4">We offer a comprehensive range of digital solutions to grow your business.</p>
+                <div class="m-auto w-[100px] h-[5px] bg-brand-purple mb-12"></div>
             </div>
-
-            <div class="  flex flex-row flex-wrap  justify-center gap-5 item-center transition duration-300">
-                <div
-                    class="bg-gray-50 group cursor-pointer group w-[370px] border-2 border-gray-400 h-[350px]  rounded-xl p-5 hover:shadow-lg hover:shadow-gray-600 hover:border-brand-purple transition duration-300">
-
-                    <i
-                        class="fa-brands fa-square-facebook text-7xl text-gray-400 mb-6 group-hover:text-brand-purple mt-2"></i>
-                    <h2 class="text-2xl mb-4 font-bold">Search Engine Optimization</h2>
-                    <p class="mb-3 text-gray-600">We ensure your website appears on the first pages of search engines
-                        and increases qualified
-                        visitors.</p>
-                    <ul class="list-unstyled text-gray-600">
-                        <li><i class="fa-solid fa-check" style="color: rgb(50, 167, 46); margin: 2px;"></i> Link
-                            Building</li>
-                        <li><i class="fa-solid fa-check" style="color: rgb(50, 167, 46); margin: 2px;"></i> Link
-                            Building</li>
-                        <li><i class="fa-solid fa-check" style="color: rgb(50, 167, 46); margin: 2px;"></i> Link
-                            Building</li>
+ 
+            <div class="flex flex-row flex-wrap justify-center gap-5 transition duration-300">
+                <div class="bg-gray-50 group cursor-pointer w-full sm:w-[370px] border-2 border-gray-400 rounded-xl p-5 hover:shadow-lg hover:shadow-gray-600 hover:border-brand-purple transition duration-300">
+                    <i class="fa-brands fa-square-facebook text-6xl text-gray-400 mb-6 group-hover:text-brand-purple mt-2 block"></i>
+                    <h2 class="text-xl md:text-2xl mb-4 font-bold">Search Engine Optimization</h2>
+                    <p class="mb-3 text-gray-600">We ensure your website appears on the first pages of search engines and increases qualified visitors.</p>
+                    <ul class="text-gray-600 space-y-1">
+                        <li><i class="fa-solid fa-check mr-1" style="color: rgb(50, 167, 46);"></i> Link Building</li>
+                        <li><i class="fa-solid fa-check mr-1" style="color: rgb(50, 167, 46);"></i> Keyword Research</li>
+                        <li><i class="fa-solid fa-check mr-1" style="color: rgb(50, 167, 46);"></i> On-Page SEO</li>
                     </ul>
                 </div>
-                <div
-                    class="group cursor-pointer  w-[370px] border-2 border-gray-400 h-[350px] rounded-xl p-5 hover:shadow-lg hover:shadow-gray-600 hover:border-brand-purple transition duration-300">
-                    <i
-                        class="fa-solid fa-chart-column fa-lg text-7xl text-gray-400 mb-6 group-hover:text-brand-purple mt-2"></i>
-
-                    <h2 class="text-2xl mb-4 font-bold">Search Engine Optimization</h2>
-                    <p class="mb-3 text-gray-600">We ensure your website appears on the first pages of search engines
-                        and increases qualified
-                        visitors.</p>
-                    <ul class="list-unstyled text-gray-600">
-                        <li><i class="fa-solid fa-check" style="color: rgb(50, 167, 46); margin: 2px;"></i> Link
-                            Building</li>
-                        <li><i class="fa-solid fa-check" style="color: rgb(50, 167, 46); margin: 2px;"></i> Link
-                            Building</li>
-                        <li><i class="fa-solid fa-check" style="color: rgb(50, 167, 46); margin: 2px;"></i> Link
-                            Building</li>
+                <div class="group cursor-pointer w-full sm:w-[370px] border-2 border-gray-400 rounded-xl p-5 hover:shadow-lg hover:shadow-gray-600 hover:border-brand-purple transition duration-300">
+                    <i class="fa-solid fa-chart-column text-6xl text-gray-400 mb-6 group-hover:text-brand-purple mt-2 block"></i>
+                    <h2 class="text-xl md:text-2xl mb-4 font-bold">Digital Analytics</h2>
+                    <p class="mb-3 text-gray-600">We ensure your website appears on the first pages of search engines and increases qualified visitors.</p>
+                    <ul class="text-gray-600 space-y-1">
+                        <li><i class="fa-solid fa-check mr-1" style="color: rgb(50, 167, 46);"></i> Link Building</li>
+                        <li><i class="fa-solid fa-check mr-1" style="color: rgb(50, 167, 46);"></i> Keyword Research</li>
+                        <li><i class="fa-solid fa-check mr-1" style="color: rgb(50, 167, 46);"></i> On-Page SEO</li>
                     </ul>
                 </div>
-
-                <div
-                    class=" bg-gray-50 group cursor-pointer w-[370px] border-2 border-gray-400 h-[350px] bg-brand-light rounded-xl p-5 hover:shadow-lg hover:shadow-gray-600 hover:border-brand-purple transition duration-300">
-                    <i
-                        class="fa-solid fa-code fa-lg text-7xl text-gray-400 mb-6 group-hover:text-brand-purple mt-2"></i>
-                    <h2 class="text-2xl mb-4 font-bold">Search Engine Optimization</h2>
-                    <p class="mb-3 text-gray-600">We ensure your website appears on the first pages of search engines
-                        and increases qualified
-                        visitors.</p>
-                    <ul class="list-unstyled text-gray-600 ">
-                        <li><i class="fa-solid fa-check" style="color: rgb(50, 167, 46); margin: 2px;"></i> Link
-                            Building</li>
-                        <li><i class="fa-solid fa-check" style="color: rgb(50, 167, 46); margin: 2px;"></i> Link
-                            Building</li>
-                        <li><i class="fa-solid fa-check" style="color: rgb(50, 167, 46); margin: 2px;"></i> Link
-                            Building</li>
+                <div class="bg-gray-50 group cursor-pointer w-full sm:w-[370px] border-2 border-gray-400 rounded-xl p-5 hover:shadow-lg hover:shadow-gray-600 hover:border-brand-purple transition duration-300">
+                    <i class="fa-solid fa-code text-6xl text-gray-400 mb-6 group-hover:text-brand-purple mt-2 block"></i>
+                    <h2 class="text-xl md:text-2xl mb-4 font-bold">Web Development</h2>
+                    <p class="mb-3 text-gray-600">We ensure your website appears on the first pages of search engines and increases qualified visitors.</p>
+                    <ul class="text-gray-600 space-y-1">
+                        <li><i class="fa-solid fa-check mr-1" style="color: rgb(50, 167, 46);"></i> Link Building</li>
+                        <li><i class="fa-solid fa-check mr-1" style="color: rgb(50, 167, 46);"></i> Keyword Research</li>
+                        <li><i class="fa-solid fa-check mr-1" style="color: rgb(50, 167, 46);"></i> On-Page SEO</li>
                     </ul>
                 </div>
-            </div>
-    </section>
-    <!-- ////////////////////////////////////////////////////////////////// -->
-    <section>
-        <div
-            class="flex flex-row flex-wrap justify-around gap-5 item-center transition duration-300 mt-[100px] bg-gradient-to-r from-brand-purple  to-blue-500 py-10 rounded-lg">
-            <div class="flex flex-col justify-center items-center flex-wrap text-white">
-                <h1 class="text-6xl mb-3 ">+50</h1>
-                <p class="text-2xl ">Clients Worldwide</p>
-            </div>
-            <div class="flex flex-col justify-center items-center flex-wrap text-white">
-                <h1 class="text-6xl mb-3 ">+100</h1>
-                <p class="text-2xl">Projects Completed
-                </p>
-            </div>
-            <div class="flex flex-col justify-center items-center flex-wrap text-white">
-                <h1 class="text-6xl mb-3 ">+1000</h1>
-                <p class="text-2xl">Marketing Experts
-                </p>
-            </div>
-            <div class="flex flex-col justify-center items-center flex-wrap text-white">
-                <h1 class="text-6xl mb-3 ">+900</h1>
-                <p class="text-2xl">Years of Experience
-                </p>
             </div>
         </div>
     </section>
-    <!-- ////////////////////////////////////////////////////////////////// -->
+ 
+    <!-- STATS -->
     <section>
+        <div class="flex flex-wrap justify-around gap-6 mt-16 md:mt-[100px] bg-gradient-to-r from-brand-purple to-blue-500 py-10 px-5 rounded-lg">
+            <div class="flex flex-col justify-center items-center text-white min-w-[120px]">
+                <h1 class="text-4xl md:text-6xl mb-2">+50</h1>
+                <p class="text-lg md:text-2xl text-center">Clients Worldwide</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-white min-w-[120px]">
+                <h1 class="text-4xl md:text-6xl mb-2">+100</h1>
+                <p class="text-lg md:text-2xl text-center">Projects Completed</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-white min-w-[120px]">
+                <h1 class="text-4xl md:text-6xl mb-2">+1000</h1>
+                <p class="text-lg md:text-2xl text-center">Marketing Experts</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-white min-w-[120px]">
+                <h1 class="text-4xl md:text-6xl mb-2">+900</h1>
+                <p class="text-lg md:text-2xl text-center">Years of Experience</p>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- TEAM -->
+    <section class="px-5">
         <div class="text-center">
-            <h1 class="text-4xl text-brand-purple mb-6 mt-[100px]">Our Creative Team</h1>
-            <p class="text-lg text-gray-600 mb-4">An elite group of the best digital marketing experts.</p>
-            <div class=" m-auto w-[100px] h-[5px] bg-brand-purple mb-[60px]">
-            </div>
+            <h1 class="text-3xl md:text-4xl text-brand-purple mb-4 mt-16 md:mt-[100px]">Our Creative Team</h1>
+            <p class="text-base md:text-lg text-gray-600 mb-4">An elite group of the best digital marketing experts.</p>
+            <div class="m-auto w-[100px] h-[5px] bg-brand-purple mb-12"></div>
         </div>
-
-        <div class="flex flex-row flex-wrap gap-5 item-center transition duration-300 justify-center">
-            <!-- // card 1 ياخد Group -->
-            <div
-                class="border rounded-3xl  text-center w-[300px] pb-4 shadow-sm hover:shadow-xl hover:shadow-gray-600/50">
-                <div
-                    class="rounded-t-3xl h-[280px] object-cover bg-purple-200 flex justify-center items-center group relative overflow-hidden ">
-                    <div class="rounded-full bg-purple-500 w-[100px] h-[100px] m-auto flex justify-center items-center">
-                        <i class="fa-solid fa-user " style="color: rgb(223, 219, 219); font-size: 60px; "></i>
+ 
+        <div class="flex flex-row flex-wrap gap-5 justify-center transition duration-300">
+            <!-- card 1 -->
+            <div class="border rounded-3xl text-center w-full sm:w-[300px] pb-4 shadow-sm hover:shadow-xl hover:shadow-gray-600/50">
+                <div class="rounded-t-3xl h-[280px] bg-purple-200 flex justify-center items-center group relative overflow-hidden">
+                    <div class="rounded-full bg-purple-500 w-[100px] h-[100px] flex justify-center items-center">
+                        <i class="fa-solid fa-user" style="color: rgb(223,219,219); font-size: 60px;"></i>
                     </div>
-                    <div
-                        class="absolute inset-0 bg-black/30 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-700 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:scale-110 transition-transform"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition-transform"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-700 hover:scale-110 transition-transform"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h1 class="text-xl font-bold my-4 ">John Doe</h1>
-                    <p class="text-gray-600 text-center">Marketing Director</p>
-                    <p class="text-gray-600 px-3 pt-3">10 years of experience in digital marketing</p>
-                </div>
+                <h1 class="text-xl font-bold my-4">John Doe</h1>
+                <p class="text-gray-600">Marketing Director</p>
+                <p class="text-gray-600 px-3 pt-3">10 years of experience in digital marketing</p>
             </div>
-            <!-- // card 2 -->
-            <div
-                class="border rounded-3xl  text-center w-[300px] pb-4 shadow-sm hover:shadow-xl hover:shadow-gray-600/50">
-                <div
-                    class="rounded-t-3xl h-[280px] object-cover bg-red-200 flex justify-center items-center group relative overflow-hidden ">
-                    <div class="rounded-full bg-red-500 w-[100px] h-[100px] m-auto flex justify-center items-center">
-                        <i class="fa-solid fa-user " style="color: rgb(223, 219, 219); font-size: 60px; "></i>
+            <!-- card 2 -->
+            <div class="border rounded-3xl text-center w-full sm:w-[300px] pb-4 shadow-sm hover:shadow-xl hover:shadow-gray-600/50">
+                <div class="rounded-t-3xl h-[280px] bg-red-200 flex justify-center items-center group relative overflow-hidden">
+                    <div class="rounded-full bg-red-500 w-[100px] h-[100px] flex justify-center items-center">
+                        <i class="fa-solid fa-user" style="color: rgb(223,219,219); font-size: 60px;"></i>
                     </div>
-                    <div
-                        class="absolute inset-0 bg-black/30 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-700 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:scale-110 transition-transform"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition-transform"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-700 hover:scale-110 transition-transform"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h1 class="text-xl font-bold my-4 ">Sara Ahmed</h1>
-                    <p class="text-gray-600 text-center">SEO Specialist</p>
-                    <p class="text-gray-600 px-3 pt-3">Specialized in search engine optimization</p>
-                </div>
+                <h1 class="text-xl font-bold my-4">Sara Ahmed</h1>
+                <p class="text-gray-600">SEO Specialist</p>
+                <p class="text-gray-600 px-3 pt-3">Specialized in search engine optimization</p>
             </div>
-            <!-- // card 3 -->
-            <div
-                class="border rounded-3xl  text-center w-[300px] pb-4 shadow-sm hover:shadow-xl hover:shadow-gray-600/50">
-                <div
-                    class="rounded-t-3xl h-[280px] object-cover bg-orange-200 flex justify-center items-center group relative overflow-hidden ">
-                    <div class="rounded-full bg-orange-500 w-[100px] h-[100px] m-auto flex justify-center items-center">
-                        <i class="fa-solid fa-user " style="color: rgb(223, 219, 219); font-size: 60px; "></i>
+            <!-- card 3 -->
+            <div class="border rounded-3xl text-center w-full sm:w-[300px] pb-4 shadow-sm hover:shadow-xl hover:shadow-gray-600/50">
+                <div class="rounded-t-3xl h-[280px] bg-orange-200 flex justify-center items-center group relative overflow-hidden">
+                    <div class="rounded-full bg-orange-500 w-[100px] h-[100px] flex justify-center items-center">
+                        <i class="fa-solid fa-user" style="color: rgb(223,219,219); font-size: 60px;"></i>
                     </div>
-                    <div
-                        class="absolute inset-0 bg-black/30 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-700 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:scale-110 transition-transform"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition-transform"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-700 hover:scale-110 transition-transform"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h1 class="text-xl font-bold my-4 ">Mohamed Ali</h1>
-                    <p class="text-gray-600 text-center">Web Developer</p>
-                    <p class="text-gray-600 px-3 pt-3">Expert in web development</p>
-                </div>
+                <h1 class="text-xl font-bold my-4">Mohamed Ali</h1>
+                <p class="text-gray-600">Web Developer</p>
+                <p class="text-gray-600 px-3 pt-3">Expert in web development</p>
             </div>
-            <!-- // card 4 -->
-            <div
-                class="border rounded-3xl  text-center w-[300px] pb-4 shadow-sm hover:shadow-xl hover:shadow-gray-600/50">
-                <div
-                    class="rounded-t-3xl h-[280px] object-cover bg-blue-200 flex justify-center items-center group relative overflow-hidden ">
-                    <div class="rounded-full bg-blue-500 w-[100px] h-[100px] m-auto flex justify-center items-center">
-                        <i class="fa-solid fa-user " style="color: rgb(223, 219, 219); font-size: 60px; "></i>
+            <!-- card 4 -->
+            <div class="border rounded-3xl text-center w-full sm:w-[300px] pb-4 shadow-sm hover:shadow-xl hover:shadow-gray-600/50">
+                <div class="rounded-t-3xl h-[280px] bg-blue-200 flex justify-center items-center group relative overflow-hidden">
+                    <div class="rounded-full bg-blue-500 w-[100px] h-[100px] flex justify-center items-center">
+                        <i class="fa-solid fa-user" style="color: rgb(223,219,219); font-size: 60px;"></i>
                     </div>
-                    <div
-                        class="absolute inset-0 bg-black/30 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-700 hover:scale-110 transition-transform">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:scale-110 transition-transform"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition-transform"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-700 hover:scale-110 transition-transform"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h1 class="text-xl font-bold my-4 ">Noura Khaled</h1>
-                    <p class="text-gray-600 text-center">Graphic Designer</p>
-                    <p class="text-gray-600 px-3 pt-3">Specialized in visual identity design</p>
-                </div>
+                <h1 class="text-xl font-bold my-4">Noura Khaled</h1>
+                <p class="text-gray-600">Graphic Designer</p>
+                <p class="text-gray-600 px-3 pt-3">Specialized in visual identity design</p>
             </div>
         </div>
     </section>
-    <!-- ///////////////////////////////////////// -->
+ 
+    <!-- CONTACT -->
     <section>
-        <div
-            class="flex flex-row flex-wrap  item-center bg-gray-900 transition duration-300 justify-around mt-[100px] p-5 ">
-
-            <div class=" bg-gray-800 rounded w-[600px] p-4 m-5 text-center">
+        <div class="flex flex-col md:flex-row flex-wrap items-start bg-gray-900 gap-8 mt-16 md:mt-[100px] p-6 md:p-10 justify-around">
+ 
+            <div class="bg-gray-800 rounded w-full md:max-w-[600px] p-4 text-center">
                 <h1 class="text-2xl my-4 text-white">Contact Us</h1>
-
                 <input type="text" placeholder="Your Name"
-                    class="border p-2 mb-4 w-full h-[65px] focus-ring focus:ring-4 focus:ring-primary focus:outline-none rounded-lg">
+                    class="border p-3 mb-4 w-full h-[55px] focus:ring-4 focus:ring-brand-purple focus:outline-none rounded-lg bg-gray-700 text-white placeholder-gray-400">
                 <input type="email" placeholder="Your Email"
-                    class="border p-2 mb-4 w-full h-[65px] focus-ring focus:ring-4 focus:ring-primary focus:outline-none rounded-lg">
+                    class="border p-3 mb-4 w-full h-[55px] focus:ring-4 focus:ring-brand-purple focus:outline-none rounded-lg bg-gray-700 text-white placeholder-gray-400">
                 <textarea placeholder="Your Message ...."
-                    class="border p-2 mb-4 w-full h-[100px] focus-ring focus:ring-4 focus:ring-primary focus:outline-none rounded-lg"> </textarea>
-
-                <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full">Send
-                    Message</button>
+                    class="border p-3 mb-4 w-full h-[100px] focus:ring-4 focus:ring-brand-purple focus:outline-none rounded-lg bg-gray-700 text-white placeholder-gray-400 resize-none"></textarea>
+                <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 w-full">Send Message</button>
             </div>
-
-            <div class="">
-                <h1 class="text-2xl my-4  text-white">Contact Information</h1>
-                <p class="mb-3 text-white"><i class="fa-solid fa-location-dot mr-2 fa-xl text-purple-400" ></i> 123 Main Street, City, Country</p>
-                <p class="mb-3 text-white"><i class="fa-solid fa-phone mr-2  fa-xl text-purple-400 "></i> +1 234 567 890</p>
-                <p class="mb-3 text-white"><i class="fa-solid fa-envelope mr-2 fa-xl text-purple-400"></i> info@example.com</p>
-
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14005.51770818256!2d30.850964946599927!3d28.648355710494016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145bac6688c7f645%3A0x318a10262db12c5!2z2YXYutin2LrYqdiMINmF2K_ZitmG2Kkg2YXYutin2LrYqdiMINmF2LHZg9iyINmF2LrYp9i62KnYjCDZhdit2KfZgdi42Kkg2KfZhNmF2YbZitin!5e0!3m2!1sar!2seg!4v1775237552077!5m2!1sar!2seg"
-                    width="500" height="250" style="border: 1px solid #8a8989;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
+            <div class="w-full md:w-auto">
+                <h1 class="text-2xl my-4 text-white">Contact Information</h1>
+                <p class="mb-3 text-white"><i class="fa-solid fa-location-dot mr-2 fa-xl text-purple-400"></i> 123 Main Street, City, Country</p>
+                <p class="mb-3 text-white"><i class="fa-solid fa-phone mr-2 fa-xl text-purple-400"></i> +1 234 567 890</p>
+                <p class="mb-5 text-white"><i class="fa-solid fa-envelope mr-2 fa-xl text-purple-400"></i> info@example.com</p>
+ 
+                <div class="w-full overflow-hidden rounded-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14005.51770818256!2d30.850964946599927!3d28.648355710494016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145bac6688c7f645%3A0x318a10262db12c5!2z2YXYutin2LrYqdiMINmF2K_ZitmG2Kkg2YXYutin2LrYqdiMINmF2LHZg9iyINmF2LrYp9i22KnYjCDZhdit2KfZgdi42Kkg2KfZhNmF2YbZitin!5e0!3m2!1sar!2seg!4v1775237552077!5m2!1sar!2seg"
+                        class="w-full md:w-[500px]" height="250" style="border: 1px solid #8a8989;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
-
-    <footer >
-       
-        <div class="bg-gray-900 text-center text-white py-4 flex justify-between items-center gap-5 px-5 border border-t-gray-400">
-            <p>&copy; 2024 My Website. All rights reserved.</p>
-
-               <div>
-                 <a href="#" class="text-white hover:text-gray-400">
-                    <i class="fa-brands fa-facebook-f fa-xl"></i>
-                </a>
-                <a href="#" class="text-white hover:text-gray-400">
-                    <i class="fa-brands fa-twitter fa-xl"></i>
-                </a>
-                <a href="#" class="text-white hover:text-gray-400">
-                    <i class="fa-brands fa-linkedin-in fa-xl"></i>
-                </a>
-                <a href="#" class="text-white hover:text-gray-400">
-                    <i class="fa-brands fa-instagram fa-xl"></i>
-                </a>
-               </div>
-           
+ 
+    <!-- FOOTER -->
+    <footer>
+        <div class="bg-gray-900 text-white py-4 flex flex-col sm:flex-row justify-between items-center gap-4 px-5 border-t border-gray-700">
+            <p class="text-center text-sm">&copy; 2024 My Website. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="#" class="text-white hover:text-gray-400"><i class="fa-brands fa-facebook-f fa-xl"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+                <a href="#" class="text-white hover:text-gray-400"><i class="fa-brands fa-instagram fa-xl"></i></a>
+            </div>
         </div>
-        <!-- icons -->
-          
-        
     </footer>
+ 
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 
 </html>
